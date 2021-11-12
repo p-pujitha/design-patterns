@@ -1,0 +1,12 @@
+CREATE TABLE TestDB.queryrecords
+(myText nvarchar(50));
+
+LOAD DATA LOCAL INFILE '/Users/ppujita5/Documents/pocs/personalpocs/design-patterns/recordCountMysql/test.csv' 
+INTO TABLE TestDB.queryrecords 
+LINES TERMINATED BY '\n'
+
+select COUNT(*) from TestDB.queryrecords 
+
+
+
+//loading csv file data directly into the Table by using mysql query.
